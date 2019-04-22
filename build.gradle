@@ -37,7 +37,7 @@ dependencies {
 	testCompile('org.gebish:geb-junit4:2.1')
 	testCompile("org.seleniumhq.selenium:selenium-chrome-driver:${seleniumVersion}")
 
-	testCompile("io.github.bonigarcia:webdrivermanager:1.5.0") {
+	testCompile("io.github.bonigarcia:webdrivermanager:3.4.0") {
 		exclude group: 'org.seleniumhq.selenium'
 	}
 }
