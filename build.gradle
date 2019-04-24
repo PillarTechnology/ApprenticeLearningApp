@@ -1,7 +1,7 @@
 buildscript {
 	ext {
 		springBootVersion = '2.0.0.RELEASE'
-		seleniumVersion = '3.0.1'
+		seleniumVersion = '3.141.59'
 	}
 	repositories {
 		mavenCentral()
@@ -34,10 +34,10 @@ dependencies {
 	runtime('mysql:mysql-connector-java')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.thymeleaf:thymeleaf-testing:3.0.3.RELEASE')
-	testCompile('org.gebish:geb-junit4:2.1')
+	testCompile('org.gebish:geb-junit4:2.3')
 	testCompile("org.seleniumhq.selenium:selenium-chrome-driver:${seleniumVersion}")
 
-	testCompile("io.github.bonigarcia:webdrivermanager:1.5.0") {
+	testCompile("io.github.bonigarcia:webdrivermanager:3.3.0") {
 		exclude group: 'org.seleniumhq.selenium'
 	}
 }
