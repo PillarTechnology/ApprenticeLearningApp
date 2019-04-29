@@ -2,6 +2,7 @@
     <h1>Create a New Post!</h1>
     <form action="#" th:action="@{/posts/new}" th:object="${post}" method="post">
         <label>Title: <input name="title" /></label>
+        <label>Username: <input name="username"/></label>
         <label>Content: <input name="content" /></label>
         <input name="submit" type="submit" value="Submit" />
     </form>

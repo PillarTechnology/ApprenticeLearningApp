@@ -45,6 +45,7 @@ public class ServiceTest {
         Post post = new Post();
         post.setTitle("Title One");
         post.setContent("Content is Here");
+        post.setUsername("max");
 
         postService.createPost(post);
 

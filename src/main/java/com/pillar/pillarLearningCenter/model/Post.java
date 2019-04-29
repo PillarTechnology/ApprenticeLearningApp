@@ -1,6 +1,7 @@
 package com.pillar.pillarLearningCenter.model;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "posts")
@@ -14,6 +15,9 @@ public class Post {
     @Column(name = "title")
     public String title;
 
+    @Column(name = "username")
+    public String username;
+
     @Column(name = "content")
     public String content;
 
@@ -24,6 +28,12 @@ public class Post {
     public String getTitle() {
         return title;
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsername() {return username;}
 
     public Long getId() {
         return id;
@@ -41,17 +51,16 @@ public class Post {
         this.content = content;
     }
 
+
     @Override
     public boolean equals(Object o) {
-        if(o == this) {
-            return true;
-        }
-
-        if (!(o instanceof Post)) {
-            return false;
-        }
-
-        Post post2 = (Post) o;
-        return post2.getId() == this.getId() && post2.getTitle().equals(this.getTitle()) && post2.getContent().equals(this.getContent());
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Post post = (Post) o;
+        return Objects.equals(id, post.id) &&
+                Objects.equals(title, post.title) &&
+                Objects.equals(username, post.username) &&
+                Objects.equals(content, post.content);
     }
+
 }

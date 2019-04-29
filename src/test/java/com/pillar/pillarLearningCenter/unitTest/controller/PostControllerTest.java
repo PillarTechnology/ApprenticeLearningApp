@@ -42,8 +42,10 @@ public class PostControllerTest {
     public void posts_ShouldPopulateModelWithPostData_WhenServiceReturnsPostData() {
         Post onePost = new Post();
         onePost.setTitle("Title One");
+        onePost.setUsername("Max");
         Post twoPost = new Post();
         twoPost.setTitle("Title Two");
+        twoPost.setUsername("Max");
         List<Post> expected = new ArrayList<>();
         expected.add(onePost);
         expected.add(twoPost);

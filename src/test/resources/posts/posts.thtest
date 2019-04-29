@@ -1,9 +1,11 @@
 %CONTEXT
 postOne = new com.pillar.pillarLearningCenter.model.Post()
 postOne.title = 'Title'
+postOne.username = 'Max'
 postOne.content = 'Content'
 postTwo = new com.pillar.pillarLearningCenter.model.Post()
 postTwo.title = 'Title Two'
+postTwo.username = 'Max'
 postTwo.content = 'Content Two'
 postList = {postOne, postTwo}
 %INPUT (classpath:templates/posts.html)
@@ -12,10 +14,12 @@ postList = {postOne, postTwo}
     <h1>Posts</h1>
     <div>
         <h1>Title</h1>
+        <h3>Max</h3>
         <p>Content</p>
     </div>
     <div>
         <h1>Title Two</h1>
+        <h3>Max</h3>
         <p>Content Two</p>
     </div>
 </html>
