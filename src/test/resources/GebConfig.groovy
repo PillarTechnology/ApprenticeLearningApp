@@ -13,5 +13,6 @@ driver = {
     // Download and configure Marionette using https://github.com/bonigarcia/webdrivermanager
 //    WebDriverManager.chromedriver().setup()
     WebDriverManager.getInstance(CHROME).setup()
+
     new ChromeDriver()
 }

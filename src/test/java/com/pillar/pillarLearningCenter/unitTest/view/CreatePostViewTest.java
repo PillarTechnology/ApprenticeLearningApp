@@ -1,7 +1,8 @@
 package com.pillar.pillarLearningCenter.unitTest.view;
 
 import com.pillar.pillarLearningCenter.controller.PostController;
-import com.pillar.pillarLearningCenter.service.PostService;
+//import com.pillar.pillarLearningCenter.service.PostService;
+import com.pillar.pillarLearningCenter.repository.PostRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +23,7 @@ public class CreatePostViewTest {
     MockMvc mockMvc;
 
     @MockBean
-    PostService postServiceMock;
+    PostRepository postServiceMock;
 
     @Test
     public void testPostNewRouteLoadsSuccessfully() throws Exception {

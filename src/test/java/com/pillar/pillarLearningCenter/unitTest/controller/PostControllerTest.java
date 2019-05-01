@@ -2,7 +2,8 @@ package com.pillar.pillarLearningCenter.unitTest.controller;
 
 import com.pillar.pillarLearningCenter.controller.PostController;
 import com.pillar.pillarLearningCenter.model.Post;
-import com.pillar.pillarLearningCenter.service.PostService;
+import com.pillar.pillarLearningCenter.repository.PostRepository;
+//import com.pillar.pillarLearningCenter.service.PostService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,7 +29,7 @@ public class PostControllerTest {
     private PostController postController;
 
     @Mock
-    private PostService postService;
+    private PostRepository postService;
 
 
     private Model model = new ExtendedModelMap();
@@ -49,7 +50,7 @@ public class PostControllerTest {
         List<Post> expected = new ArrayList<>();
         expected.add(onePost);
         expected.add(twoPost);
-        Mockito.when(postService.getAllPosts()).thenReturn(expected);
+        Mockito.when(postService.findAll()).thenReturn(expected);
 
         postController.posts(model);
 
@@ -93,7 +94,7 @@ public class PostControllerTest {
         post.setTitle("Dummy Title");
         post.setContent("Dummy Content");
         postController.submitPost(post);
-        Mockito.verify(postService).createPost(post);
+        Mockito.verify(postService).save(post);
     }
 
 }
