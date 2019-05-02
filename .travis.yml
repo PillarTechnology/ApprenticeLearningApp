@@ -25,4 +25,4 @@ before_script:
 script:
   - xvfb-run make test
   - ./gradlew build
-  - test
+  - gradle test
