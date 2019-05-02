@@ -10,8 +10,7 @@ addons:
   chrome: stable
 
 dist: trusty
-services:
-  - xvfb
+
 
 before_install:
   - # start your web application and listen on `localhost`
@@ -23,6 +22,5 @@ before_script:
   - sleep 3
 
 script:
-  - xvfb-run make test
   - ./gradlew build
-  - ./gradlew test
+  - gradle test
