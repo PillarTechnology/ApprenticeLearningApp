@@ -37,7 +37,6 @@ public class PostViewTest {
     }
 
     @Test
-    @Ignore
     public void testPostsHtmlView(){
         TestExecutor testExecutor = new TestExecutor();
         testExecutor.execute("classpath:posts/posts.thtest");

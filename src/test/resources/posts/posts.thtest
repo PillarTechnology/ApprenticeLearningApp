@@ -16,10 +16,12 @@ postList = {postOne, postTwo}
         <h1>Title</h1>
         <h3>Max</h3>
         <p>Content</p>
+        <input name = "delete" type="submit" value="Delete"/>
     </div>
     <div>
         <h1>Title Two</h1>
         <h3>Max</h3>
         <p>Content Two</p>
+        <input name = "delete" type="submit" value="Delete"/>
     </div>
 </html>
