@@ -2,22 +2,16 @@ package com.pillar.pillarLearningCenter.unitTest.service;
 
 import com.pillar.pillarLearningCenter.model.Post;
 import com.pillar.pillarLearningCenter.repository.PostRepository;
-import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.dao.DataRetrievalFailureException;
-import org.springframework.orm.jpa.JpaObjectRetrievalFailureException;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
-import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
@@ -42,7 +36,6 @@ public class ServiceTest {
         assertEquals(post, postSaved);
     }
 
-    //(expected = javax.persistence.EntityNotFoundException.class)
     @Test
     public void getPostAndThenDeletePostRemovesPostFromList() {
         Post post = new Post();

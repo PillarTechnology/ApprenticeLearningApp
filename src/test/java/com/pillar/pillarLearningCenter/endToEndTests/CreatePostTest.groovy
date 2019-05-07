@@ -26,7 +26,7 @@ class CreatePostTest extends GebTest {
         $("input", value: "Submit").click()
 
         assert $("h1")[0].text() == "Posts"
-        assert $("div h1")[-1].text() == "New Title -    in memory"
+        assert $("div h1")[-1].text() == "New Title - in memory"
         assert $("div p")[-1].text() == "Content here"
         assert $("div h3")[-1].text() == "Max"
         //teardown()

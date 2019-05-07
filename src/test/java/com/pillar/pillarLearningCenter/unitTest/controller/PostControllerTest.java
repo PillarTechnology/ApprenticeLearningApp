@@ -3,7 +3,6 @@ package com.pillar.pillarLearningCenter.unitTest.controller;
 import com.pillar.pillarLearningCenter.controller.PostController;
 import com.pillar.pillarLearningCenter.model.Post;
 import com.pillar.pillarLearningCenter.repository.PostRepository;
-//import com.pillar.pillarLearningCenter.service.PostService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,7 +1,6 @@
 package com.pillar.pillarLearningCenter.unitTest.view;
 
 import com.pillar.pillarLearningCenter.controller.PostController;
-//import com.pillar.pillarLearningCenter.service.PostService;
 import com.pillar.pillarLearningCenter.repository.PostRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
