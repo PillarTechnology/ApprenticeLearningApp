@@ -48,34 +48,3 @@ dependencies {
     }
 }
 
-bootRun {
-    if (project.hasProperty('args')) {
-        args project.args.split(',')
-    }
-}
-
-task bootRunTest(type: org.springframework.boot.gradle.tasks.run.BootRun, dependsOn: build) {
-    group= 'Application'
-    doFirst() {
-        main = bootJar.mainClassName
-        classpath = sourceSets.main.runtimeClasspath
-        systemProperty 'spring.profiles.active', 'test'
-    }
-}
-
-task bootRunProd(type: org.springframework.boot.gradle.tasks.run.BootRun, dependsOn: build) {
-    group= 'Application'
-    doFirst() {
-        main = bootJar.mainClassName
-        classpath = sourceSets.main.runtimeClasspath
-        systemProperty 'spring.profiles.active', 'prod'
-    }
-}
-
-
-task startServer(type: SpawnProcessTask, dependsOn: 'assemble') {
-    command "java -jar ${projectDir}/build/libs/zim-service.jar"
-    ready 'Started Application'
-}
-
-task stopServer(type: KillProcessTask)
