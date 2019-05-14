@@ -21,4 +21,5 @@ before_install:
 script:
 
   - ./gradlew build
-  - ./gradlew bootRun && groovy CreatePostTest
+  - ./gradlew bootRun &
+  - ./gradlew

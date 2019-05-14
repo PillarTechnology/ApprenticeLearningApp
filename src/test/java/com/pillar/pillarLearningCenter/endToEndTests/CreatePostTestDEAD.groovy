@@ -1,12 +1,13 @@
 package com.pillar.pillarLearningCenter.endToEndTests
 
+
 import geb.junit4.GebTest
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 
 @RunWith(JUnit4)
-class CreatePostTest extends GebTest {
+class CreatePostTestDEAD extends GebTest {
     //teardown method here
     /*    @Autowired
     private TestEntityManager entityManager;
