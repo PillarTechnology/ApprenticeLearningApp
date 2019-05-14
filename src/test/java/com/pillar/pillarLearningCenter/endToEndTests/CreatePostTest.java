@@ -11,12 +11,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
 
 
 import java.util.List;
 
 public class CreatePostTest {
     private WebDriver driver;
+    private ChromeOptions options = new ChromeOptions().addArguments("--headless");
 
     @BeforeClass
     public static void setupClass() {
@@ -25,7 +28,7 @@ public class CreatePostTest {
 
     @Before
     public void setupTest() {
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
     }
 
     @After

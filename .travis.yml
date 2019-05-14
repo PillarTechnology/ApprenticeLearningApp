@@ -20,6 +20,6 @@ before_install:
 
 script:
 
-  - ./gradlew build
-  - ./gradlew bootRun &
-  - ./gradlew
+  - gradle build
+  - gradle bootRun &
+  - gradle test
