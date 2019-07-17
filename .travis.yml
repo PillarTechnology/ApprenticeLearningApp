@@ -1,8 +1,24 @@
 language: java
 
+jdk:
+  - oraclejdk8
 cache:
   directories:
   - $HOME/.gradle
 
+addons:
+  chrome: stable
+
+dist: trusty
+services:
+  - xvfb
+
+before_install:
+  - # start your web application and listen on `localhost`
+  - "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome --headless --disable-gpu --remote-debugging-port=8080 http://localhost &"
+
+
 script:
-  - ./gradlew build
+  - gradle bootRun &
+  - gradle test
+  - gradle --stop

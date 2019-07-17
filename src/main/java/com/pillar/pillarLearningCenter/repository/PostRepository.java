@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long>{
-    //public Post getOne(Long id);
-    public Post save(Post post);
+
 }
